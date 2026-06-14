@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply min-h-screen bg-bp-bg text-bp-text font-sans antialiased;
+    background-image:
+      linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  ::selection {
+    @apply bg-bp-accent/30 text-white;
+  }
+}
+
+@layer components {
+  .bp-card {
+    @apply rounded-xl border border-bp-border bg-bp-surface/90 backdrop-blur-sm shadow-card;
+  }
+
+  .bp-input {
+    @apply w-full rounded-lg border border-bp-border bg-bp-surface2 px-4 py-2.5 text-sm text-bp-text placeholder:text-bp-muted outline-none transition focus:border-bp-accent focus:ring-2 focus:ring-bp-accent/20;
+  }
+
+  .bp-label {
+    @apply mb-1.5 block text-sm font-medium text-bp-text;
+  }
+
+  .bp-btn-primary {
+    @apply inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-bp-accent to-bp-accent2 px-5 py-2.5 text-sm font-semibold text-bp-bg transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-bp-accent/40 disabled:opacity-50;
+  }
+
+  .bp-btn-ghost {
+    @apply inline-flex items-center justify-center rounded-lg border border-bp-border bg-transparent px-4 py-2 text-sm font-medium text-bp-text transition hover:border-bp-accent/50 hover:bg-bp-surface2;
+  }
+
+  .bp-badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium;
+  }
+}
