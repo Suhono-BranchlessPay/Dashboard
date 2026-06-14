@@ -5,5 +5,5 @@ dist-ssr
 .env
 .env.*
 !.env.example
-_instructions.txt
+*.docx
 .DS_Store

@@ -16,9 +16,9 @@ export default function MerchantLogin() {
       subtitle="Access anchors, evidence, and compliance tools"
       footer={
         <>
-          New merchant?{' '}
+          New to BP?{' '}
           <Link to="/merchant/register" className="text-bp-accent hover:underline">
-            Register
+            Register free
           </Link>
           {' · '}
           <Link to="/partner/login" className="text-bp-accent hover:underline">
@@ -36,9 +36,18 @@ export default function MerchantLogin() {
           <label className="bp-label" htmlFor="password">Password</label>
           <input id="password" type="password" className="bp-input" required />
         </div>
+        <label className="flex items-center gap-2 text-sm text-bp-muted">
+          <input type="checkbox" className="rounded border-bp-border bg-bp-surface2" />
+          Remember me
+        </label>
         <button type="submit" className="bp-btn-primary w-full">
-          Sign in
+          Login
         </button>
+        <div className="text-center">
+          <button type="button" className="text-sm text-bp-accent hover:underline">
+            Forgot password?
+          </button>
+        </div>
       </form>
     </AuthLayout>
   )

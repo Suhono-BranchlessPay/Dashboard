@@ -19,8 +19,17 @@ export default function PartnerDashboard() {
   return (
     <DashboardLayout portal="partner" nav={partnerNav} userName="OtomaX Integration">
       <div className="mb-6">
-        <h1 className="text-2xl font-bold">Partner dashboard</h1>
-        <p className="text-sm text-bp-muted">Settlement feed · webhook health · audit trail</p>
+        <h1 className="font-display text-2xl font-bold">Partner dashboard</h1>
+        <p className="text-sm text-bp-muted">Referral code · clients · commissions</p>
+      </div>
+
+      <div className="bp-card mb-6 border-bp-primary/30 bg-gradient-to-r from-bp-primary/10 to-bp-accent/5 p-5">
+        <div className="text-xs uppercase tracking-wide text-bp-muted">Your referral code</div>
+        <div className="mt-2 flex flex-wrap items-center gap-3">
+          <code className="font-mono text-2xl font-bold text-bp-accent">BP-VERry-2026</code>
+          <button type="button" className="bp-btn-ghost text-xs">Copy link</button>
+        </div>
+        <p className="mt-2 text-sm text-bp-muted">Earn 20% recurring commission for every client you refer</p>
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">

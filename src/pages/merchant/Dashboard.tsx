@@ -8,10 +8,10 @@ const merchantNav = [
 ]
 
 const stats = [
-  { label: 'Anchors today', value: '128', delta: '+12%', color: 'text-bp-accent' },
-  { label: 'Verified', value: '98.4%', delta: '+0.3%', color: 'text-bp-green' },
-  { label: 'Pending queue', value: '3', delta: '-2', color: 'text-bp-yellow' },
-  { label: 'Evidence packs', value: '24', delta: '+4', color: 'text-bp-accent2' },
+  { label: 'Records anchored', value: '1,312', icon: '🔐', color: 'text-bp-accent' },
+  { label: 'Protected', value: '$45,536', icon: '💰', color: 'text-bp-green' },
+  { label: 'Integrity score', value: '95.4', icon: '🛡️', color: 'text-bp-primary' },
+  { label: 'Hours saved', value: '688 hrs', icon: '⏱️', color: 'text-bp-text' },
 ]
 
 export default function MerchantDashboard() {
@@ -25,11 +25,22 @@ export default function MerchantDashboard() {
       <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
         {stats.map((s) => (
           <div key={s.label} className="bp-card p-4">
+            <div className="text-lg">{s.icon}</div>
             <div className="text-xs uppercase tracking-wide text-bp-muted">{s.label}</div>
-            <div className={`mt-2 text-2xl font-bold ${s.color}`}>{s.value}</div>
-            <div className="mt-1 font-mono text-xs text-bp-muted">{s.delta} vs yesterday</div>
+            <div className={`mt-2 font-display text-2xl font-bold ${s.color}`}>{s.value}</div>
           </div>
         ))}
+      </div>
+
+      <div className="bp-card mt-6 p-4">
+        <h2 className="font-display font-semibold">Your connected platforms</h2>
+        <div className="mt-3 flex flex-wrap gap-2">
+          {['Odoo', 'QuickBooks', 'Square POS'].map((erp) => (
+            <span key={erp} className="bp-badge border border-bp-border bg-bp-surface2 text-bp-text">
+              {erp}
+            </span>
+          ))}
+        </div>
       </div>
 
       <div className="mt-6 grid gap-4 lg:grid-cols-3">

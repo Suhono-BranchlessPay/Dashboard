@@ -15,7 +15,7 @@ export function AuthLayout({ title, subtitle, children, footer }: AuthLayoutProp
         <Logo subtitle="Dashboard Portal" />
       </div>
       <div className="bp-card w-full max-w-md p-6 sm:p-8">
-        <h1 className="text-2xl font-bold">{title}</h1>
+        <h1 className="font-display text-2xl font-bold">{title}</h1>
         <p className="mt-1 text-sm text-bp-muted">{subtitle}</p>
         <div className="mt-6">{children}</div>
         {footer && <div className="mt-6 border-t border-bp-border pt-4 text-center text-sm text-bp-muted">{footer}</div>}
